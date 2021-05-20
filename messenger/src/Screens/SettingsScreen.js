@@ -9,7 +9,7 @@ const SettingsScreen = () => {
       </View>
 
       <View style={styles.userProfile}>
-        <Text>Priyesh</Text>
+        <Text>Priyesh Profile</Text>
       </View>
     </>
   )
