@@ -1,33 +1,43 @@
 import React from "react"
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, ScrollView } from "react-native"
+
+import LocalActivityIcon from "@material-ui/icons/LocalActivity"
 
 const SettingsScreen = () => {
   return (
     <>
-      <View style={styles.container}>
-        <Text style={styles.firstText}> Settings</Text>
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <Text style={styles.firstText}> Settings</Text>
+        </View>
 
-      <View style={styles.userProfile}>
-        <Text>Priyesh Profile</Text>
-      </View>
+        <View style={styles.userProfile}>
+          <Text>Priyesh </Text>
+        </View>
 
-      <View style={styles.firstBlock}>
-        <Text>Starred Messages</Text>
-        <Text>WhatsApp web/Desktop</Text>
-      </View>
+        <View style={styles.firstBlock}>
+          <Text>Starred Messages</Text>
 
-      <View style={styles.secondBlock}>
-        <Text>Account</Text>
-        <Text>Chats</Text>
-        <Text>Notification Service</Text>
-        <Text>Storage and Data</Text>
-      </View>
+          <View style={styles.lineStyle} />
+          <Text style={styles.blockText}>WhatsApp web/Desktop</Text>
+        </View>
 
-      <View style={styles.thirdBlock}>
-        <Text>Help</Text>
-        <Text>Tell A Friend</Text>
-      </View>
+        <View style={styles.secondBlock}>
+          <Text>Account</Text>
+          <View style={styles.lineStyle} />
+          <Text style={styles.blockText}>Chats</Text>
+          <View style={styles.lineStyle} />
+          <Text style={styles.blockText}>Notification Service</Text>
+          <View style={styles.lineStyle} />
+          <Text style={styles.blockText}>Storage and Data</Text>
+        </View>
+
+        <View style={styles.thirdBlock}>
+          <Text style={styles.blockText}>Help</Text>
+          <View style={styles.lineStyle} />
+          <Text style={styles.blockText}>Tell A Friend</Text>
+        </View>
+      </ScrollView>
     </>
   )
 }
@@ -47,18 +57,28 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   firstBlock: {
-    marginBottom: 100,
+    marginBottom: 50,
     padding: 10,
     backgroundColor: "white",
   },
+  blockText: {
+    padding: 15,
+    paddingLeft: 0,
+  },
   secondBlock: {
-    marginBottom: 150,
+    marginBottom: 50,
     padding: 10,
     backgroundColor: "white",
   },
   thirdBlock: {
     padding: 10,
     backgroundColor: "white",
+  },
+  lineStyle: {
+    borderWidth: 0.5,
+    borderColor: "grey",
+    marginTop: 10,
+    paddingLeft: 5,
   },
 })
 
