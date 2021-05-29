@@ -73,6 +73,9 @@ const styles = StyleSheet.create({
     padding: 15,
     paddingLeft: 0,
   },
+  starIcon: {
+    paddingRight: 100,
+  },
   secondBlock: {
     marginBottom: 50,
     padding: 10,
