@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   lineStyle: {
     borderWidth: 0.5,
     borderColor: "grey",
-    margin: 7,
+    marginBottom: 10,
   },
 })
 
