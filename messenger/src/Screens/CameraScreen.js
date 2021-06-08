@@ -16,7 +16,7 @@ function CameraScreen() {
     return <View />
   }
   if (hasPermission === false) {
-    return <Text>Give me permission to your camera !</Text>
+    return <Text>No permissions have been set !</Text>
   }
   return (
     <View style={{ flex: 1 }}>
