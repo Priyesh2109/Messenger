@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native"
+import { View, Text, StyleSheet, Button } from "react-native"
 import { Camera } from "expo-camera"
 
 function CameraScreen() {
@@ -19,16 +19,31 @@ function CameraScreen() {
     return <Text>Give me permission to your camera !</Text>
   }
   return (
-    <View style={styles.container}>
-      <Text>Camera functionality here soon </Text>
+    <View style={{ flex: 1 }}>
+      <View style={styles.cameraContainer}>
+        <Camera style={styles.fixedRatio} type={type} ratio={"1:1"} />
+      </View>
+      <Button
+        title="Flip view"
+        onPress={() => {
+          setType(
+            type === Camera.Constants.Type.back
+              ? Camera.Constants.Type.front
+              : Camera.Constants.Type.back
+          )
+        }}
+      ></Button>
     </View>
   )
 }
 const styles = StyleSheet.create({
-  container: {
+  cameraContainer: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    flexDirection: "row",
+  },
+  fixedRatio: {
+    flex: 1,
+    aspectRatio: 1,
   },
 })
 export default CameraScreen
