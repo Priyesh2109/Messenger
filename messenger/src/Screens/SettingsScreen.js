@@ -22,7 +22,7 @@ const SettingsScreen = () => {
         </View>
 
         <View style={styles.firstBlock}>
-          <Icon style={styles.icon} name="star" color="orange" size="30" />
+          <Icon style={styles.icon} name="star" color="orange" fontSize="30" />
           <Text style={styles.blockText}>Starred Messages</Text>
           <View style={styles.lineStyle}></View>
           <Icon style={styles.icon} name="computer" color="#1E8449" size="30" />
