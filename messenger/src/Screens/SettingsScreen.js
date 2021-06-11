@@ -22,34 +22,29 @@ const SettingsScreen = () => {
         </View>
 
         <View style={styles.firstBlock}>
-          <Icon style={styles.icon} name="star" color="orange" fontSize="30" />
+          <Icon style={styles.icon} name="star" color="orange" />
           <Text style={styles.blockText}>Starred Messages</Text>
           <View style={styles.lineStyle}></View>
-          <Icon style={styles.icon} name="computer" color="#1E8449" size="30" />
+          <Icon style={styles.icon} name="computer" color="#1E8449" />
           <Text style={styles.blockText}>WhatsApp Web/Desktop</Text>
         </View>
 
         <View style={styles.secondBlock}>
-          <Icon style={styles.icon} name="settings" color="#1E7EE3" size="30" />
+          <Icon style={styles.icon} name="settings" color="#1E7EE3" />
           <Text style={styles.blockText}>Account</Text>
           <View style={styles.lineStyle}></View>
-          <Icon style={styles.icon} name="chat" color="#1BDC47" size="30" />
+          <Icon style={styles.icon} name="chat" color="#1BDC47" />
           <Text style={styles.blockText}>Chats</Text>
           <View style={styles.lineStyle}></View>
-          <Icon
-            style={styles.icon}
-            name="notifications"
-            color="red"
-            size="30"
-          />
+          <Icon style={styles.icon} name="notifications" color="red" />
           <Text style={styles.blockText}>Notifications</Text>
           <View style={styles.lineStyle}></View>
-          <Icon style={styles.icon} name="storage" color="#06A42A" size="30" />
+          <Icon style={styles.icon} name="storage" color="#06A42A" />
           <Text style={styles.blockText}>Storage and Data</Text>
         </View>
 
         <View style={styles.thirdBlock}>
-          <Icon style={styles.icon} name="help" color="#2256F7" size="30" />
+          <Icon style={styles.icon} name="help" color="#2256F7" />
           <Text style={styles.blockText}>Help</Text>
           <View style={styles.lineStyle}></View>
           <Icon
@@ -57,7 +52,6 @@ const SettingsScreen = () => {
             name="heart"
             type="font-awesome-5"
             color="#F71E04"
-            size="30"
           />
           <Text style={styles.blockText}>Tell A Friend</Text>
         </View>
@@ -103,6 +97,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     paddingRight: 320,
+    fontSize: 20,
   },
   lineStyle: {
     borderWidth: 0.5,
