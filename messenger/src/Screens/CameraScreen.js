@@ -58,6 +58,8 @@ function CameraScreen() {
           ref={(ref) => setCamera(ref)}
         />
       </View>
+
+      <Button title="take a snap" onPress={() => takePicture()} />
       <Button
         title="Flip view"
         onPress={() => {
@@ -67,9 +69,7 @@ function CameraScreen() {
               : Camera.Constants.Type.back
           )
         }}
-      ></Button>
-      <Button title="take a snap" onPress={() => takePicture()} />
-
+      />
       <Button title="pcik image" onPress={() => pickImage()} />
       {image && <Image source={{ uri: image }} style={{ flex: 1 }} />}
     </View>
@@ -77,12 +77,11 @@ function CameraScreen() {
 }
 const styles = StyleSheet.create({
   cameraContainer: {
-    flex: 1,
-    flexDirection: "row",
+    height: 400,
+    flexDirection: "column",
   },
   fixedRatio: {
-    flex: 1,
-    aspectRatio: 1,
+    height: 550,
   },
 })
 export default CameraScreen
