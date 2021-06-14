@@ -1,10 +1,11 @@
 import React from "react"
 import { View, Text, StyleSheet } from "react-native"
+import SelectChat from "../Components/SelectChat"
 
 const ChatsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Chat screen here</Text>
+      <SelectChat />
     </View>
   )
 }
