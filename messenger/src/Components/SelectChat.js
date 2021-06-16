@@ -1,30 +1,40 @@
 import React from "react"
-import { StyleSheet, Text, View, TextInput } from "react-native"
+import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native"
 import { Icon } from "react-native-elements"
 
 const SelectChat = () => {
   return (
-    <View style={styles.chatBanner}>
-      <Text style={styles.bannerText}> Messages</Text>
-      <Icon name="message" />
-      <TextInput style={styles.input} placeholder="search" />
-    </View>
+    <>
+      <ScrollView>
+        <View style={styles.bannerContainer}>
+          <Icon name="message" color="green" style={styles.icon} />
+          <Text style={styles.bannerText}> Messages</Text>
+
+          <TextInput style={styles.input} placeholder="search" />
+        </View>
+        <View style={styles.convoContainer}>
+          <Text>list of convos</Text>
+        </View>
+      </ScrollView>
+    </>
   )
 }
 
 export default SelectChat
 
 const styles = StyleSheet.create({
-  chatBanner: {
-    marginBottom: 520,
+  bannerContainer: {
+    marginTop: 20,
     backgroundColor: "white",
-    height: 245,
+    height: 190,
     width: 390,
     justifyContent: "center",
     borderRadius: 5,
   },
+  icon: {
+    paddingLeft: 300,
+  },
   bannerText: {
-    paddingBottom: 10,
     marginLeft: 30,
     fontSize: 25,
     fontWeight: "bold",
@@ -35,5 +45,14 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 15,
     backgroundColor: "gainsboro",
+  },
+
+  convoContainer: {
+    marginTop: 5,
+    backgroundColor: "white",
+    height: 600,
+    width: 390,
+    justifyContent: "center",
+    borderRadius: 5,
   },
 })
