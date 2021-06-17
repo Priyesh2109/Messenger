@@ -1,5 +1,12 @@
 import React from "react"
-import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native"
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  ScrollView,
+  TouchableWithoutFeedback,
+} from "react-native"
 import { Icon } from "react-native-elements"
 
 const SelectChat = () => {
@@ -12,8 +19,27 @@ const SelectChat = () => {
 
           <TextInput style={styles.input} placeholder="search" />
         </View>
-        <View style={styles.convoContainer}>
-          <Text>list of convos</Text>
+
+        <View style={styles.convoBlock}>
+          <Text style={styles.blockText}> Messages</Text>
+          <View style={styles.lineStyle}></View>
+        </View>
+
+        <View style={styles.convoBlock}>
+          <Text style={styles.blockText}>Messages</Text>
+          <View style={styles.lineStyle}></View>
+        </View>
+        <View style={styles.convoBlock}>
+          <Text style={styles.blockText}>Messages</Text>
+          <View style={styles.lineStyle}></View>
+        </View>
+        <View style={styles.convoBlock}>
+          <Text style={styles.blockText}> Messages</Text>
+          <View style={styles.lineStyle}></View>
+        </View>
+        <View style={styles.convoBlock}>
+          <Text style={styles.blockText}>Messages</Text>
+          <View style={styles.lineStyle}></View>
         </View>
       </ScrollView>
     </>
@@ -24,7 +50,7 @@ export default SelectChat
 
 const styles = StyleSheet.create({
   bannerContainer: {
-    marginTop: 20,
+    marginTop: 10,
     backgroundColor: "white",
     height: 190,
     width: 390,
@@ -47,12 +73,14 @@ const styles = StyleSheet.create({
     backgroundColor: "gainsboro",
   },
 
-  convoContainer: {
-    marginTop: 5,
+  convoBlock: {
+    paddingTop: 90,
+    marginLeft: 1,
     backgroundColor: "white",
-    height: 600,
-    width: 390,
-    justifyContent: "center",
-    borderRadius: 5,
+  },
+  lineStyle: {
+    borderWidth: 0.5,
+    borderColor: "lightgrey",
+    marginBottom: 10,
   },
 })
