@@ -21,14 +21,6 @@ const SettingsScreen = () => {
           />
         </View>
 
-        <View style={styles.firstBlock}>
-          <Icon style={styles.icon} name="star" color="orange" />
-          <Text style={styles.blockText}>Starred Messages</Text>
-          <View style={styles.lineStyle}></View>
-          <Icon style={styles.icon} name="computer" color="#1E8449" />
-          <Text style={styles.blockText}>WhatsApp Web/Desktop</Text>
-        </View>
-
         <View style={styles.secondBlock}>
           <Icon style={styles.icon} name="settings" color="#1E7EE3" />
           <Text style={styles.blockText}>Account</Text>
@@ -74,11 +66,7 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "white",
   },
-  firstBlock: {
-    marginBottom: 50,
-    padding: 10,
-    backgroundColor: "white",
-  },
+
   secondBlock: {
     marginBottom: 50,
     padding: 10,

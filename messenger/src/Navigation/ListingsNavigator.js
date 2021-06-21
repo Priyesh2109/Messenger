@@ -1,19 +1,17 @@
 import React from "react"
-
 import { createStackNavigator } from "@react-navigation/stack"
 
-import CallsScreen from "../Screens/CallsScreen"
+import ListingsScreen from "../Screens/ListingsScreen"
 
 const Stack = createStackNavigator()
 
-const CallNavigator = () => (
+const ListingsNavigator = () => (
   <Stack.Navigator>
     <Stack.Screen
-      name="Calls"
-      component={CallsScreen}
+      name="Listings"
+      component={ListingsScreen}
       options={{ headerShown: false }}
     />
   </Stack.Navigator>
 )
-
-export default CallNavigator
+export default ListingsNavigator
