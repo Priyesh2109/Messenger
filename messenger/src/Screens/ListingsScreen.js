@@ -1,14 +1,13 @@
 import React from "react"
 import { View, Text, StyleSheet } from "react-native"
 
-const CallsScreen = () => {
+const ListingsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>List of calls here</Text>
+      <Text>This is the screen where collectables will be listed!</Text>
     </View>
   )
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -16,4 +15,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 })
-export default CallsScreen
+export default ListingsScreen
