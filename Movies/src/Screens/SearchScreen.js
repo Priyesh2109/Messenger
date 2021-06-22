@@ -1,8 +1,12 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { View, Text, StyleSheet } from "react-native"
 import axios from "axios"
+import fetchMovies from "../Requests.js/fetchMovies"
 
 const SearchScreen = () => {
+  const [term, setTerm] = useState("")
+  const [movies, setMovies] = useState([])
+
   return (
     <View style={styles.container}>
       <Text>
