@@ -1,17 +1,16 @@
 import React from "react"
 import { createStackNavigator } from "@react-navigation/stack"
-
-import SearchScreen from "../Screens/SearchScreen"
+import HomeScreen from "../Screens/HomeScreen"
 
 const Stack = createStackNavigator()
 
-const searchNavigator = () => (
+const homeNavigator = () => (
   <Stack.Navigator>
     <Stack.Screen
-      name="Search"
-      component={SearchScreen}
+      name="Home"
+      component={HomeScreen}
       options={{ headerShown: false }}
     />
   </Stack.Navigator>
 )
-export default searchNavigator
+export default homeNavigator
