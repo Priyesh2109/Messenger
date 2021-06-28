@@ -1,18 +1,17 @@
-import axios from 'axios';
-import { URL, API_KEY } from '../Config/const';
+import axios from "axios"
+import { URL, API_KEY } from "../Config/const"
 
- const fetchMovies = async (search, movies) => {
-  console.log('fetch movies', search);
+const fetchMovies = async (search, movies) => {
   if (!search) {
-    const response = await axios.get(`${URL}movie/popular?api_key=${API_KEY}`);
-    return [...movies, ...response.data.results];
+    const response = await axios.get(`${URL}movie/popular?api_key=${API_KEY}`)
+    return [...movies, ...response.data.results]
   } else {
-    console.log('in else');
+    console.log("if typed something")
     const response = await axios.get(
       `${URL}search/movie?api_key=${API_KEY}&language=en-US&query=${search}`
-    );
-    return [...response.data.results];
+    )
+    return [...response.data.results]
   }
- };
+}
 
- export default fetchMovies
+export default fetchMovies
