@@ -43,7 +43,7 @@ const SignUpScreen = ({ navigation }) => {
         //onPress={register}
       />
       <Text onPress={() => navigation.navigate("Home")}>
-        hey click here to go the HomeScreen and search movies
+        hey click here to go the HomeScreen and search for movies
       </Text>
       <View style={{ height: 100 }} />
     </KeyboardAvoidingView>
