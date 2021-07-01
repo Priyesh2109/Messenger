@@ -58,7 +58,7 @@ const SignUpScreen = ({ navigation }) => {
       </View>
       <Button
         containerStyle={styles.button}
-        title="Sign Up !"
+        title="Sign Up !!"
         onPress={register}
       />
 
