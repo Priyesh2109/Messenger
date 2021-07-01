@@ -8,18 +8,37 @@ import {
   StyleSheet,
 } from "react-native"
 import { Button } from "react-native-elements"
+import { auth } from "../firebase"
 
 const SignUpScreen = ({ navigation }) => {
   const [email, setEmail] = useState("")
   const [pasword, setPasword] = useState("")
+  const [name, setName] = useState("")
 
-  //register functionality here
+  const register = () => {
+    auth
+      .createUserWithEmailAndPassword(email, pasword)
+      .then((authUser) => {
+        authUser.user.updateProfile({
+          displayName: email,
+        })
+      })
+      .catch((error) => alert(error.message))
+  }
 
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <Text style={styles.textColor}> Create an account</Text>
 
       <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.inputBox}
+          placeholder="Full Name"
+          autoFocus
+          type="text"
+          value={name}
+          onChangeText={(text) => setName(text)}
+        />
         <TextInput
           style={styles.inputBox}
           placeholder="Email"
@@ -34,17 +53,15 @@ const SignUpScreen = ({ navigation }) => {
           secureTextEntry
           value={pasword}
           onChangeText={(text) => setPasword(text)}
-          //onSubmitEditing={register}
+          onSubmitEditing={register}
         />
       </View>
       <Button
         containerStyle={styles.button}
         title="Sign Up !"
-        //onPress={register}
+        onPress={register}
       />
-      <Text onPress={() => navigation.navigate("Home")}>
-        hey click here to go the HomeScreen and search for movies
-      </Text>
+
       <View style={{ height: 100 }} />
     </KeyboardAvoidingView>
   )
