@@ -1,11 +1,23 @@
+import * as firebase from "firebase"
+import "firebase/firestore"
 import "firebase/auth"
-import "firebase/database"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCC8JmCxQvIkxi23zPkxwXpU11lRnvnVC8",
-  authDomain: "searchmovie-ffa13.firebaseapp.com",
-  projectId: "searchmovie-ffa13",
-  storageBucket: "searchmovie-ffa13.appspot.com",
-  messagingSenderId: "34603074899",
-  appId: "1:34603074899:web:4fa1a6b424ce86d50c0da6",
+  apiKey: "AIzaSyBn6WL-wqTwAsyI-oRPrKav75xr5_QMc5E",
+  authDomain: "fir-build-62b0c.firebaseapp.com",
+  projectId: "fir-build-62b0c",
+  storageBucket: "fir-build-62b0c.appspot.com",
+  messagingSenderId: "162758461427",
+  appId: "1:162758461427:web:83d694aabff77ad87ab486",
 }
+let app
+if (firebase.apps.length === 0) {
+  app = firebase.initializeApp(firebaseConfig)
+} else {
+  app = firebase.app()
+}
+
+const db = app.firestore()
+const auth = firebase.auth()
+
+export { db, auth }
