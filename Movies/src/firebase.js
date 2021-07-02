@@ -3,12 +3,12 @@ import "firebase/firestore"
 import "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBn6WL-wqTwAsyI-oRPrKav75xr5_QMc5E",
-  authDomain: "fir-build-62b0c.firebaseapp.com",
-  projectId: "fir-build-62b0c",
-  storageBucket: "fir-build-62b0c.appspot.com",
-  messagingSenderId: "162758461427",
-  appId: "1:162758461427:web:83d694aabff77ad87ab486",
+  apiKey: "AIzaSyAf57D8vx2vSX-MYkZEtsREFaVbIi6JmPw",
+  authDomain: "moviesearch-17b68.firebaseapp.com",
+  projectId: "moviesearch-17b68",
+  storageBucket: "moviesearch-17b68.appspot.com",
+  messagingSenderId: "382757106131",
+  appId: "1:382757106131:web:e9bd97099d063dc2f47f26",
 }
 let app
 if (firebase.apps.length === 0) {
