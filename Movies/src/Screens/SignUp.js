@@ -64,7 +64,7 @@ const SignUpScreen = ({ navigation }) => {
       <Button
         onPress={() => navigation.navigate("Login")}
         containerStyle={styles.button}
-        title="Register"
+        title="Login !!"
       />
 
       <View style={{ height: 100 }} />
