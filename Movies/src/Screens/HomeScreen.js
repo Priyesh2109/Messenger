@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from "react-native"
 import { Card } from "react-native-paper"
-import { EvilIcons } from "@expo/vector-icons"
+
 import Constants from "expo-constants"
 import axios from "axios"
 
@@ -24,10 +24,13 @@ const HomeScreen = ({ navigation }) => {
   const [page, setPage] = useState(1)
   const [searchNow, setSearchNow] = useState(false)
 
-  useEffect(() => {
+  const getMovie = () => {
     fetchMovies(searchTerm, movies).then((data) => {
       setMovies(data)
     })
+  }
+  useEffect(() => {
+    getMovie()
   }, [searchNow])
 
   return (
@@ -39,20 +42,14 @@ const HomeScreen = ({ navigation }) => {
             placeholder={"search movies"}
             value={searchTerm}
             onChangeText={(text) => setSearchTerm(text)}
+            onSubmitEditing={getMovie}
           />
           <TouchableOpacity
             onPress={() => {
               console.log("pressed")
               setSearchNow(!searchNow)
             }}
-          >
-            <EvilIcons
-              name={searchTerm ? "search" : "refresh"}
-              size={20}
-              color="black"
-              style={{ alignSelf: "center", marginHorizontal: 20 }}
-            />
-          </TouchableOpacity>
+          ></TouchableOpacity>
         </View>
 
         <View style={styles.movieListCard}>
@@ -90,7 +87,7 @@ const styles = StyleSheet.create({
   },
   inputCard: {
     position: "absolute",
-    top: -40,
+    top: -30,
     margin: 20,
     left: 10,
     right: 10,
@@ -101,13 +98,14 @@ const styles = StyleSheet.create({
     zIndex: 100,
   },
   input: {
-    padding: 10,
     flex: 1,
+    padding: 10,
   },
   movieCard: {
     flex: 1,
     height: 200,
     margin: 5,
+    marginTop: 20,
     alignSelf: "center",
     overflow: "hidden",
     borderWidth: 5,
