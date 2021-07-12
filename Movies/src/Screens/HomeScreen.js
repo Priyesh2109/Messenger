@@ -59,7 +59,9 @@ const HomeScreen = ({ navigation }) => {
             renderItem={({ item, index }) => {
               return (
                 <Card style={styles.movieCard}>
-                  <TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("moreInfo")}
+                  >
                     <Image
                       source={{
                         uri: `http://image.tmdb.org/t/p/w780${item.poster_path}`,
