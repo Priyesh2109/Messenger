@@ -13,5 +13,17 @@ const fetchMovies = async (search, movies) => {
     return [...response.data.results]
   }
 }
+export const fetchMoreInfo = async (id) => {
+  const response = await axios.get(
+    `${URL}movie/${id}/credits?api_key=${API_KEY}` //get cast and crew from selected Movie
+  )
+  console.log(response.data.crew)
+
+  const director = response.data.crew.find(
+    (dir) => dir.known_for_department === "Directing" // find director from selected Movie
+  )
+  const credits = response.data
+  return { director: director, credits: credits } // an object with key value
+}
 
 export default fetchMovies
